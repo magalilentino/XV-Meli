@@ -51,3 +51,8 @@ const x = setInterval(() => {
     flecha.style.opacity = "1";   // Visible al inicio
   }
 });
+
+document.getElementById("flecha").addEventListener("click", function() {
+  const siguiente = document.getElementById("tiempo");
+  siguiente.scrollIntoView({ behavior: "smooth" });
+});
