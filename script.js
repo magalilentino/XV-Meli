@@ -42,3 +42,12 @@ const x = setInterval(() => {
   }
 
   setInterval(createLantern, 800);
+
+  window.addEventListener("scroll", function() {
+  const flecha = document.getElementById("flecha");
+  if (window.scrollY > 50) {
+    flecha.style.opacity = "0";   // Se oculta
+  } else {
+    flecha.style.opacity = "1";   // Visible al inicio
+  }
+});
