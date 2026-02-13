@@ -52,7 +52,12 @@ const x = setInterval(() => {
   }
 });
 
-document.getElementById("flecha").addEventListener("click", function() {
-  const siguiente = document.getElementById("tiempo");
+const flecha = document.getElementById("flecha");
+const siguiente = document.getElementById("tiempo");
+
+function scrollAbajo() {
   siguiente.scrollIntoView({ behavior: "smooth" });
-});
+}
+
+flecha.addEventListener("click", scrollAbajo);
+flecha.addEventListener("touchstart", scrollAbajo);
